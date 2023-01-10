@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pawns : MonoBehaviour
 {
-    // Start is called before the first frame update
+    []
     void Start()
     {
         
@@ -13,6 +13,6 @@ public class Pawns : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        0
     }
 }
