@@ -1,21 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class AppManager : MonoBehaviour
-{
-    [SerializeField] public Array Colors[];
+////public class AppManager : MonoBehaviour
+////{
+////    [SerializeField] public Color[] _Colors;
 
-
-    void Start()
-    {
+////    //private button _thebutton;
+   
         
-    }
+////    //}
 
     
-    void Update()
-    {
+////    //void update()
+////    //{
         
-    }
-}
+////    //}
+////}

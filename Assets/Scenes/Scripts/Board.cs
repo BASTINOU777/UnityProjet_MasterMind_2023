@@ -17,7 +17,7 @@ public class Board : MonoBehaviour
 
     public void CheckActualRow()
     {
-        Debug.Log("J'ai appuyé sur le bouton !");
+        //Debug.Log("J'ai appuyé sur le bouton !");
         // Unity Event : invocation de l'évent, le ? vérifie si l'évent n'est pas déjà en cours.
         //OnWin?.Invoke();
 
