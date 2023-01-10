@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Pawns : MonoBehaviour
 {
-    []
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        0
-    }
+    [SerializeField] private Collider _collider ;
+    [SerializeField] private int _actualColorNumber;
+    [SerializeField] private MeshRenderer _renderer;
 }
+// function pour activer les pawns
+//        void private ActivatePawn()
+//    {
+//        if
+//        {
+//            GetComponent<MeshRenderer>()._renderer;
+//        }
+//    }
+
+//    {
+
+//    }
+//}
