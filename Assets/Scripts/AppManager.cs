@@ -1,19 +1,30 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppManager : MonoBehaviour
 {
-    public Color[] _resultColors;
     public Color[] _answerColors;
+    public Color[] _resultColors;
 
+    //Raycast Hit 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-    //}
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.GetComponent<Pawns>() != null)
+                {
 
+                    hit.collider.GetComponent<Pawns>().PawnChangeColor();
+                }
+            }
 
-    //void update()
-    //{
-
-    //}
+        }
+    }
 }

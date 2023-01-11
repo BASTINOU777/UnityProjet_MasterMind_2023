@@ -8,40 +8,44 @@ using UnityEngine.UIElements;
 
 public class Pawns : MonoBehaviour
 {
+    [SerializeField] private AppManager _appManager;
     [SerializeField] private GameObject _pawn;
-
-    //Récuperer la position de la souris au clik
-    void Update()
+    private int _actualColorNumber = -1;
+    private Collider _collider;
+    private void Start()
     {
-        if (Input.GetButtonDown("MousePosition"))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            {
-                Debug.Log(mousePos.x);
-                Debug.Log(mousePos.y);
-            }
-            // si bouton gauche de la souris est detecté au clik 
-        if (Input.GetMouseButton(0))
-            {
-                Debug.Log("Pressed left click");
-             }
+        _collider = GetComponent<Collider>();
 
-            }
-     }
-    //fonction pour déclancher le bouton de la souris au over
-    private void OnMouseOver()
-    {
-        
     }
+    public void ActivatePawn()
+    {
+        _collider.enabled = true;
+    }
+    public void DesactivatePawn()
+    {
+        _collider.enabled = false;
+    }
+
     // fonction pour changer la couleur du pion 
-    public void PawnChangeColor(Material mat)
+    public void PawnChangeColor()
     {
-        GetComponent<MeshRenderer>().material = mat;
+
+        if (_actualColorNumber == -1 || _actualColorNumber >= _appManager._answerColors.Length - 1)
+        {
+            _actualColorNumber = 0;
+        }
+        else
+        {
+            _actualColorNumber++;
+        }
+        GetComponent<MeshRenderer>().material.SetColor("_Color", _appManager._answerColors[_actualColorNumber]);
     }
+    public void PawnChangeColor(int resultColorNumber)
+    {
+        GetComponent<MeshRenderer>().material.SetColor("_Color", _appManager._resultColors[resultColorNumber]);
+    }
+
 }
-
-
-
 
 
 
