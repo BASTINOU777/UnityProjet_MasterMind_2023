@@ -8,20 +8,20 @@ public class AppManager : MonoBehaviour
     public Color[] _answerColors;
     public Color[] _resultColors;
 
-    //Raycast Hit 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+            //j'utilise le ray pour récup points d'impac (hit)
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.GetComponent<Pawns>() != null)
+                //si je touche un getcomponent 
+                if (hit.collider.GetComponent<Pawn>() != null )
                 {
 
-                    hit.collider.GetComponent<Pawns>().PawnChangeColor();
+                    hit.collider.GetComponent<Pawn>().ChangeColor();
                 }
             }
 
