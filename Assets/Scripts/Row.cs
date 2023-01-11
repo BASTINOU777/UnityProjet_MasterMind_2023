@@ -12,12 +12,12 @@ public class Row : MonoBehaviour
         for (int i = 0; i < _answerPawns.Length; i++)
         {
             _answerPawns[i].ActivatePawn();
-        } 
+        }
     }
 
     public void DesactivateLine()
     {
-        for(int i = 0; i < _answerPawns.Length; i++)
+        for (int i = 0; i < _answerPawns.Length; i++)
         {
             _answerPawns[i].DesactivatePawn();
         }
