@@ -17,15 +17,31 @@ public class Board : MonoBehaviour
     [SerializeField] private Row[] _rows;
     [SerializeField] private Pawn[] _finalRowPawns;
     [SerializeField] private AppManager _appManager;
-    private int[] _finalRow;
-    private int _actualLine = 0;
+    [SerializeField] private int[] _finalRow;
+    [SerializeField] private int _actualLine = 0;
     
 
 
     private void Start()
     {
+
+        _appManager = FindObjectOfType<AppManager>();
+        GetMaterialColors();
         SetFinalRow();
         ActivateNewLine();
+    }
+    private void VerifLines()
+    {
+        // je vérifie si la couleur d'une pawn est égale 
+    }
+    private void GetMaterialColors()
+    {
+        _appManager._answerColors = new Color[6];
+        for (int i = 0; i < _appManager._availableColors.Length; i++)
+        {
+            //il prends la couleur du material dans availableColors et je l'asigne au meme index dans answerColors 
+            _appManager._answerColors[i] = _appManager._availableColors[i].color;
+        }
     }
 
     private void SetFinalRow()
@@ -33,14 +49,13 @@ public class Board : MonoBehaviour
         _finalRow = new int[4];
         for (int i = 0; i < _finalRow.Length; i++)
         {
-            _finalRow[i] = Random.Range(0, _finalRow.Length);
-            _finalRowPawns[i].GetComponent<MeshRenderer>().material.SetColor("_Color", _appManager._answerColors[_finalRow[i]]);
+            // choisir color random
+            int Rand = Random.Range(0, _appManager._availableColors.Length);
+            // j'attribut un material  au hasard a chaques pawns 
+            _finalRowPawns[i].GetComponent<MeshRenderer>().material = _appManager._availableColors[Rand];
         }
     }
-    private void Party()
-    {
-        
-    }
+   
     private void ActivateNewLine()
     {
         for (int i = 0; i < _rows.Length; i++)

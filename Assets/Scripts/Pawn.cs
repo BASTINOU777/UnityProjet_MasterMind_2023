@@ -10,6 +10,7 @@ public class Pawn : MonoBehaviour
 
     private void Start()
     {
+        _appManager = FindObjectOfType<AppManager>();
         _collider = GetComponent<Collider>();
 
     }

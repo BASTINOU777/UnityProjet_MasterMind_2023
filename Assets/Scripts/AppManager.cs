@@ -7,10 +7,11 @@ public class AppManager : MonoBehaviour
 {
     public Color[] _answerColors;
     public Color[] _resultColors;
+    public Material[] _availableColors = new Material[6];
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+      /*  if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -25,6 +26,6 @@ public class AppManager : MonoBehaviour
                 }
             }
 
-        }
+        }*/
     }
 }
