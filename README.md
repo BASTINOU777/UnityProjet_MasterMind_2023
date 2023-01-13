@@ -1,5 +1,7 @@
 # Simplon 2022-23 MasterMind
-
+![Capture d'écran_20230112_144440](https://user-images.githubusercontent.com/101596380/212086752-3d3b90a9-b021-4958-b30a-a5730d38dba1.png)
+![Capture d'écran_20230112_144654](https://user-images.githubusercontent.com/101596380/212086790-e8b7504e-c7b8-429e-be3d-94b5bc764903.png)
+![Capture d'écran_20230112_144715](https://user-images.githubusercontent.com/101596380/212086811-619703d2-ace4-4682-b149-40a93e412f54.png)
 ## Objectif : 
 
 Réaliser un jeu MasterMind en mode un joueur. L'ordinateur détermine la combinaison finale et indique au joueur quelles sont les bonnes couleurs et celles qui sont uniquement bien placées.
