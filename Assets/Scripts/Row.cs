@@ -22,7 +22,7 @@ public class Row : MonoBehaviour
             _answerPawns[i].DesactivatePawn();
         }
     }
-
+    //fonction pour récup la couleur des lignes 
     public int[] GetRowColors()
     {
         int[] rowColors = new int[_answerPawns.Length];
